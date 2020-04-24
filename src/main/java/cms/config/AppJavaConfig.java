@@ -1,5 +1,9 @@
 package cms.config;
 
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.ResourceBundle;
+
 import cms.logging.ExceptionWriter;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,11 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
-import cms.config.StageManager;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.ResourceBundle;
-
 @Configuration
 public class AppJavaConfig {
 

@@ -1,6 +1,6 @@
 
 package cms.dao;
-import cms.Start;
+import cms.Main;
 import cms.model.Vehicle;
 import cms.service.SystemInitializer;
 import org.junit.Assert;
@@ -29,7 +29,7 @@ import static org.junit.Assert.*;
 // DataJpaTest does not load all the application beans, it starts only persistence-related stuff
 @DataJpaTest
 // Exclude SystemInitializer from the startup, we don't want the admin account here
-@ComponentScan(basePackageClasses = Start.class, excludeFilters = {
+@ComponentScan(basePackageClasses = Main.class, excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SystemInitializer.class)})
 public class VehicleDaoTest {
 

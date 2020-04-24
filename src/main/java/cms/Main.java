@@ -35,6 +35,12 @@ public class Main extends Application{
     }
 
     @Override
+    public void init() throws Exception{
+        springContext = springBootApplicationContext();
+    }
+
+
+    @Override
     public void stop() throws Exception {
         springContext.close();
     }
