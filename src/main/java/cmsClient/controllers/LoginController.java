@@ -1,4 +1,4 @@
-package cms.controllers;
+package cmsClient.controllers;
 
 import javafx.event.ActionEvent;
 import org.springframework.stereotype.Controller;
