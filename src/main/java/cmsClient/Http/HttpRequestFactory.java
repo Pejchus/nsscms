@@ -3,6 +3,7 @@ package cmsClient.Http;
 import cmsClient.Http.requests.GetHttp;
 import cmsClient.Http.requests.HttpRequest;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 public class HttpRequestFactory {
@@ -14,6 +15,11 @@ public class HttpRequestFactory {
     }
 
     public HttpRequest createGetRequest(String url) throws MalformedURLException {
-        return new GetHttp(baseurl+url);
+        try {
+            return new GetHttp(baseurl+url);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
