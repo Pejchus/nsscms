@@ -2,7 +2,6 @@ package cmsClient;
 
 import cmsClient.FxmlHandler.SpringFXMLLoader;
 import cmsClient.FxmlHandler.StageManager;
-import cmsClient.Http.Connection;
 import cmsClient.view.FxmlView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +17,6 @@ public class Client extends Application {
 
     protected StageManager stageManager;
     private static Scene scene;
-    private static Connection connection;
 
         public static void main(String[] args){
             Application.launch();
@@ -27,8 +25,6 @@ public class Client extends Application {
         @Override
         public void start(Stage stage) throws IOException {
             stageManager = new StageManager(new SpringFXMLLoader(),stage);
-            connection = new Connection();
-            connection.startConnection("localhost",8080);
             displayInitialScene();
         }
 
