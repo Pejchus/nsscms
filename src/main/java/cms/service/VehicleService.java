@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class VehicleService {
 
@@ -23,6 +25,10 @@ public class VehicleService {
         dao.createVehicle(licensePlate);
     }
 
+    @Transactional
+    public List<Vehicle> findall(){
+       return dao.findAll();
+    }
     @Transactional
     public Vehicle find(String licensePlate){
         return dao.find(licensePlate);

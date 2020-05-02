@@ -1,6 +1,7 @@
 package cms.service;
 
 import cms.DAO.SystemmanagerDao;
+import cms.model.Regularuser;
 import cms.model.Systemmanager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,20 @@ public class SystemmanagerService {
     @Transactional
     public void persist(Systemmanager manager){
         dao.persist(manager);
+    }
+
+
+
+    @Transactional
+    public boolean autentificate(String username, String password) {
+        Systemmanager user = find(username);
+        if(user==null){
+            return false;
+        }
+        if(user.getPassword()==password){
+            return true;
+        }
+        return false;
     }
 
 }

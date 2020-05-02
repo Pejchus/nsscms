@@ -45,4 +45,16 @@ public class RegularuserService {
     public void setShipmentFailed(Integer id){
         dao.setShipmentFailed(id);
     }
+
+    @Transactional
+    public boolean autentificate(String username,String password){
+        Regularuser user= dao.find(username);
+        if(user==null){
+            return false;
+        }
+        if(user.getPassword()==password){
+            return true;
+        }
+        return false;
+    }
 }

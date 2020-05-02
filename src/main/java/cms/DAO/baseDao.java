@@ -31,7 +31,7 @@ public abstract class baseDao<T> implements genericDao<T> {
     @Override
     public List<T> findAll(){
         try {
-            return em.createQuery("SELECT e FROM" + type.getSimpleName() + " e", type).getResultList();
+            return em.createQuery("SELECT e FROM " + type.getSimpleName() + " e", type).getResultList();
         }catch (RuntimeException e) {
             throw new PersistenceException(e);
         }

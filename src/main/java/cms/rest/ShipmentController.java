@@ -1,13 +1,10 @@
 package cms.rest;
 
-import cms.model.Archive;
 import cms.model.Shipment;
-import cms.service.ArchiveService;
 import cms.service.ShipmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,8 +48,7 @@ public class ShipmentController {
 
     @PutMapping(value = "/shipments/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void createShipment(@RequestBody Shipment shipment) {
-        shipmentService.createShipment(shipment.getCargo(),shipment.getDestination());
+    public void createShipment() {;
     }
 
 

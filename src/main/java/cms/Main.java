@@ -3,11 +3,14 @@ package cms;
 import cms.view.FxmlView;
 import javafx.stage.Stage;
 import cms.config.StageManager;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javafx.application.Application;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 /**
  * Main entry point of a Spring Boot application.
