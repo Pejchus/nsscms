@@ -18,7 +18,7 @@ public class Coder {
     public static String codeDispatchMessage(List<Message> list){
         String result ="";
         for (Message m:list){
-            result = result +m.getDriver()+"@"+m.getTime().toString()+"@"+m.getContent();
+            result = result +m.getDriver()+"@"+m.getTime().toString()+"@"+m.getContent()+"@";
         }
         return result;
     }
