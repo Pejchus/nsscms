@@ -25,14 +25,15 @@ public class RegularuserService {
         this.dao = dao;
     }
 
+
     @Transactional
     public Regularuser find(String username){
         return dao.find(username);
     }
 
     @Transactional
-    public List<Regularuser> findAll(){
-        return dao.findAll();
+    public String findAll(){
+        return Coder.codeRegular(dao.findAll());
     }
     @Transactional
     public void setShipmentFinished(Integer id, String description){
@@ -52,7 +53,8 @@ public class RegularuserService {
         if(user==null){
             return false;
         }
-        if(user.getPassword()==password){
+        System.out.println(user.getPassword()+"="+password);
+        if(user.getPassword().equals(password)){
             return true;
         }
         return false;

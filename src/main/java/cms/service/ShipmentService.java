@@ -41,8 +41,9 @@ public class ShipmentService {
     }
 
     @Transactional
-    public void createShipment(String cargo,  String destination){
-        dao.createShipment(cargo,destination);
+    public void createShipment(String cargo,  String destination,String vehicle){
+
+        dao.createShipment(cargo,destination,vehicle);
     }
 
 }

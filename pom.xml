@@ -25,7 +25,6 @@
 
 
     <dependencies>
-
         <!-- Web application -->
         <!-- Will pull in web-related dependencies, including Jackson for JSON -->
         <dependency>
@@ -113,25 +112,13 @@
 
 
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
-            <version>11</version>
-            <type>pom</type>
-        </dependency>
 
-        <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-graphics</artifactId>
-        <version>11</version>
-    </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>11.0.2</version>
-        </dependency>
 
-    </dependencies>
+
+</dependencies>
+
+
+
 
     <build>
         <plugins>

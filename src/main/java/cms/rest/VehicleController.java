@@ -36,29 +36,9 @@ public class VehicleController {
         return new ResponseEntity<>(result,HttpStatus.OK);
     }
 
-        @GetMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-        public Vehicle getVehicle(@PathVariable String id) {
-            return vehicleService.find(id);
-        }
-
-
-        @PutMapping(value = "/vehicles/assign", consumes = MediaType.APPLICATION_JSON_VALUE)
-        public void assign( @RequestBody Vehicle v, Regularuser u){
-             vehicleService.assignVehicle(v.getLicenseplate(),u.getUsername());
-        }
 
 
 
-        @DeleteMapping(value = "/vehicles/delete", consumes = MediaType.APPLICATION_JSON_VALUE)
-        public void deleteVehicle(@RequestBody Vehicle v){
-            vehicleService.destroyVehicle(v.getLicenseplate());
-        }
-
-        @PutMapping(value = "/vehicles/shipment", consumes = MediaType.APPLICATION_JSON_VALUE)
-        @ResponseStatus(HttpStatus.NO_CONTENT)
-        public void createShipment(@RequestBody Vehicle v) throws Exception{
-            vehicleService.createVehicle(v.getLicenseplate());
-        }
 
 
 

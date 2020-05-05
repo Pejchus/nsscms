@@ -6,7 +6,6 @@ import cms.model.Shipment;
 import javax.persistence.EntityManager;
 import javax.persistence.OrderBy;
 import javax.persistence.PersistenceContext;
-import java.beans.beancontext.BeanContextMembershipEvent;
 import java.util.List;
 import java.util.Objects;
 
@@ -40,7 +39,7 @@ public class ArchiveDao extends baseDao<Archive>{
     public boolean archiveShipment(Integer id, String description, String status){
         Shipment s = findShipment(id);
         Archive a = new Archive();
-        a.setAssignedvehicle(s.getAssignedvehicle());
+        a.setAssignedvehicle(s.getVehicle());
         a.setCargo(s.getCargo());
         a.setDescription(description);
         a.setStatus(status);

@@ -9,12 +9,13 @@ import cms.service.SystemmanagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest/manager")
+@RequestMapping("manager")
 public class ManagerController {
     private final SystemmanagerService service;
 
@@ -35,6 +36,12 @@ public class ManagerController {
     @PutMapping(value = "/managers/shipments", consumes = MediaType.APPLICATION_JSON_VALUE)
     public boolean processShipment(@RequestBody Shipment shipment, Vehicle v){
         return service.processShipment(shipment.getId(),v.getLicenseplate());
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> findAll(){
+
+        return new ResponseEntity<>(service.findAll(),HttpStatus.OK);
     }
 
 

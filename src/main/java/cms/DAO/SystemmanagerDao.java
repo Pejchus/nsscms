@@ -1,14 +1,12 @@
 package cms.DAO;
 
 import cms.model.Shipment;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import cms.model.Systemmanager;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.Objects;
 import cms.model.Regularuser;
-import cms.model.Shipment;
 
 @Repository
 public class SystemmanagerDao extends baseDao<Systemmanager>{
@@ -57,7 +55,7 @@ public class SystemmanagerDao extends baseDao<Systemmanager>{
     public boolean processShipment(Integer id, String licensePlate){
         Objects.requireNonNull(id);
         Shipment s = em.find(Shipment.class, id);
-        s.setAssignedvehicle(licensePlate);
+        s.setVehicle(licensePlate);
         em.getTransaction();
         try{
             em.persist(s);

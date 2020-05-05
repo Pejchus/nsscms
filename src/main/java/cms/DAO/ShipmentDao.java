@@ -1,7 +1,6 @@
 package cms.DAO;
 
 
-import cms.model.Regularuser;
 import org.springframework.stereotype.Repository;
 import cms.model.Shipment;
 import javax.persistence.EntityManager;
@@ -53,13 +52,13 @@ public class ShipmentDao extends baseDao<Shipment>{
         }
     }
 
-    public void createShipment(String cargo,  String destination){
+    public void createShipment(String cargo,  String destination,String vehicle){
         Shipment s = new Shipment();
         s.setStatus("Pending");
         s.setDestination(destination);
-        em.getTransaction();
-        em.persist(s);
-        em.getTransaction().commit();
+        s.setCargo(cargo);
+        s.setVehicle( vehicle);
+        persist(s);
     }
 
 }

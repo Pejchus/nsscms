@@ -31,6 +31,6 @@ public class LoginRest {
         if(systemmanagerService.autentificate(username,password)) {
             return new ResponseEntity<>("DISPATCH", HttpStatus.OK);
         }
-        return new ResponseEntity<>("LOGINFAILED",HttpStatus.OK);
+        return new ResponseEntity<>("LOGIN",HttpStatus.OK);
     }
 }

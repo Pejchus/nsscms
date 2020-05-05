@@ -1,16 +1,15 @@
 package cms.model;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @DiscriminatorValue("SHIPMENT")
 public class Shipment {
 
   private String cargo;
-  private String assignedvehicle;
+  private String vehicle;
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
   private String status;
   private String destination;
@@ -25,12 +24,12 @@ public class Shipment {
   }
 
 
-  public String getAssignedvehicle() {
-    return assignedvehicle;
+  public String getVehicle() {
+    return vehicle;
   }
 
-  public void setAssignedvehicle(String assignedvehicle) {
-    this.assignedvehicle = assignedvehicle;
+  public void setVehicle(String assignedvehicle) {
+    this.vehicle = assignedvehicle;
   }
 
 

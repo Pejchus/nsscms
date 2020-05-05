@@ -56,10 +56,16 @@ public class SystemmanagerService {
         if(user==null){
             return false;
         }
-        if(user.getPassword()==password){
+        System.out.println(user.getPassword()+"="+password);
+        if(user.getPassword().equals(password)){
+            System.out.println("kokot");
             return true;
         }
         return false;
+    }
+    @Transactional
+    public String findAll(){
+        return Coder.codeManager(dao.findAll());
     }
 
 }
