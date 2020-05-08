@@ -2,6 +2,7 @@ package cms.service;
 
 import cms.model.Message;
 import cms.model.Regularuser;
+import cms.model.Shipment;
 import cms.model.Systemmanager;
 
 import java.util.List;
@@ -34,6 +35,13 @@ public class Coder {
         String result ="";
         for (Systemmanager r:list){
             result = result +r.getUsername()+"@";
+        }
+        return result;
+    }
+    public static String codeShipment(List<Shipment> list){
+        String result ="";
+        for (Shipment m:list){
+            //result = result +m.+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@";
         }
         return result;
     }

@@ -27,7 +27,7 @@ public class ShipmentDao extends baseDao<Shipment>{
     }
 
     public List<Shipment> findByStatus(String status){
-        return em.createQuery("SELECT s FROM Shipment s WHERE s.status = :status", Shipment.class).getResultList();
+        return em.createQuery("SELECT s FROM Shipment s WHERE s.status like :status", Shipment.class).setParameter("status",status).getResultList();
     }
     public boolean setStatus(String status, Integer id){
         Shipment s = find(id);

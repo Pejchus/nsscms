@@ -40,6 +40,8 @@ public class ShipmentService {
         return dao.deleteShipment(id);
     }
 
+
+
     @Transactional
     public void createShipment(String cargo,  String destination,String vehicle){
 
