@@ -11,6 +11,22 @@ public class Vehicle {
   @Id
   private String licenseplate;
 
+  public boolean isAvailability() {
+    return availability;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  private int id;
+
+
+
 
   public long getShipmentid() {
     return shipmentid;

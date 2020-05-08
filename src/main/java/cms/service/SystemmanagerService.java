@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class SystemmanagerService {
 
@@ -64,8 +66,8 @@ public class SystemmanagerService {
         return false;
     }
     @Transactional
-    public String findAll(){
-        return Coder.codeManager(dao.findAll());
+    public List<Systemmanager> findAll(){
+        return dao.findAll();
     }
 
 }

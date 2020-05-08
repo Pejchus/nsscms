@@ -1,13 +1,21 @@
 package cms.service;
 
-import cms.model.Message;
-import cms.model.Regularuser;
-import cms.model.Shipment;
-import cms.model.Systemmanager;
+import cms.model.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Coder {
+
+    @Autowired
+    private  VehicleService vehicleService;
+
+
+
+
+
     public static String codeDriverMessage(List<Message> list){
         String result ="";
         for (Message m:list){
@@ -35,6 +43,25 @@ public class Coder {
         String result ="";
         for (Systemmanager r:list){
             result = result +r.getUsername()+"@";
+        }
+        return result;
+    }
+
+    public static String codeManagerFull(List<Systemmanager> list){
+        String result ="";
+        for (Systemmanager r:list){
+            result = result + r.getFullname()+"@"+r.getUsername()+"@";
+        }
+        return result;
+    }
+
+    public String codeRegularFull(List<Regularuser> list){
+        String result ="";
+        int i = 0;
+        for (Regularuser r:list){
+            String vehicle = vehicleService.findById(r.getVehicleid()).getLicenseplate();
+            result = result + r.getFullname()+"@"+r.getUsername()+"@"+vehicle+"@"+r.getLicensenumber()+"@"+"true"+"@";
+            i++;
         }
         return result;
     }

@@ -32,9 +32,10 @@ public class RegularuserService {
     }
 
     @Transactional
-    public String findAll(){
-        return Coder.codeRegular(dao.findAll());
+    public List<Regularuser> findAll(){
+        return dao.findAll();
     }
+
     @Transactional
     public void setShipmentFinished(Integer id, String description){
         dao.setShipmentFinished(id);

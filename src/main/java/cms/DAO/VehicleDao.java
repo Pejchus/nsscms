@@ -25,9 +25,13 @@ public class VehicleDao extends baseDao<Vehicle>{
             em.persist(v);
     }
 
-    public Vehicle find(String licensePlate){
-        Objects.requireNonNull(licensePlate);
-        return em.find(Vehicle.class, licensePlate);
+    public Vehicle find(String id){
+        Objects.requireNonNull(id);
+        return em.find(Vehicle.class, id);
+    }
+
+    public Vehicle findbyId(String id){
+        return  em.createQuery("select s from  Vehicle s where s.id = :id" , Vehicle.class).setParameter("id", Integer.valueOf(id)).getSingleResult();
     }
 
     public void assignVehicle(String licensePlate, String username){

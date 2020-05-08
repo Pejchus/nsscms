@@ -4,6 +4,7 @@ import cms.model.Regularuser;
 import cms.model.Shipment;
 import cms.model.Systemmanager;
 import cms.model.Vehicle;
+import cms.service.Coder;
 import cms.service.ShipmentService;
 import cms.service.SystemmanagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,12 @@ public class ManagerController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> findAll(){
 
-        return new ResponseEntity<>(service.findAll(),HttpStatus.OK);
+        return new ResponseEntity<String>(Coder.codeManager(service.findAll()),HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/full",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> findAllFull(){
+        return new ResponseEntity<String>((Coder.codeManagerFull(service.findAll())),HttpStatus.OK);
     }
 
 
