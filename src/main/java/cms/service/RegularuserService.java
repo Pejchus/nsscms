@@ -5,6 +5,7 @@ import cms.DAO.RegularuserDao;
 import cms.DAO.ShipmentDao;
 import cms.model.Regularuser;
 import cms.model.Shipment;
+import cms.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,12 +18,14 @@ public class RegularuserService {
     private final RegularuserDao dao;
     private final ArchiveDao archivedao;
     private final ShipmentDao shipmentdao;
+    private final VehicleService vehicleService;
 
     @Autowired
-    public RegularuserService(RegularuserDao dao,ArchiveDao archivedao,ShipmentDao shipmentdao) {
+    public RegularuserService(RegularuserDao dao, ArchiveDao archivedao, ShipmentDao shipmentdao, VehicleService vehicleService) {
         this.archivedao=archivedao;
         this.shipmentdao=shipmentdao;
         this.dao = dao;
+        this.vehicleService = vehicleService;
     }
 
 
@@ -46,6 +49,12 @@ public class RegularuserService {
     @Transactional
     public void setShipmentFailed(Integer id){
         dao.setShipmentFailed(id);
+    }
+
+    @Transactional
+    public void create(String username, String name,String password,String vehicle,String licence){
+        Vehicle v = vehicleService.find(vehicle);
+        dao.create(username, name, v.getId(), licence,password);
     }
 
     @Transactional

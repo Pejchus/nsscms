@@ -13,7 +13,7 @@ public class Regularuser extends Userbase{
 
   private String fullname;
   private String password;
-  private String vehicleid;
+  private int vehicleid;
   private String licensenumber;
 
 
@@ -44,11 +44,11 @@ public class Regularuser extends Userbase{
   }
 
 
-  public String getVehicleid() {
+  public int getVehicleid() {
     return vehicleid;
   }
 
-  public void setVehicleid(String vehicleid) {
+  public void setVehicleid(int vehicleid) {
     this.vehicleid = vehicleid;
   }
 

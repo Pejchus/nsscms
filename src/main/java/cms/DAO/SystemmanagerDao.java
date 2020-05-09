@@ -25,12 +25,11 @@ public class SystemmanagerDao extends baseDao<Systemmanager>{
         return em.find(Systemmanager.class, username);
     }
 
-    public boolean createUser(String username, String password, String fullName, String license){
-        Regularuser user = new Regularuser();
+    public boolean createUser(String username, String password, String fullName){
+        Systemmanager user = new Systemmanager();
         user.setFullname(fullName);
         user.setPassword(password);
         user.setUsername(username);
-        user.setLicensenumber(license);
         try {
             em.persist(user);
             return true;

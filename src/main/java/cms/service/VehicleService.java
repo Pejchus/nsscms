@@ -34,7 +34,7 @@ public class VehicleService {
         return dao.find(licensePlate);
     }
     @Transactional
-    public Vehicle findById(String licensePlate){
+    public Vehicle findById(int licensePlate){
         return dao.findbyId(licensePlate);
     }
 

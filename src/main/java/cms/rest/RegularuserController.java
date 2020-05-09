@@ -4,6 +4,7 @@ import cms.model.Regularuser;
 import cms.model.Shipment;
 import cms.service.Coder;
 import cms.service.RegularuserService;
+import cms.service.SystemmanagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,13 +16,14 @@ import org.springframework.web.bind.annotation.*;
 public class RegularuserController {
 
     private final RegularuserService service;
-
+    private final SystemmanagerService systemmanagerService;
     private final Coder coder;
 
 
     @Autowired
-    public RegularuserController(RegularuserService service, Coder coder) {
+    public RegularuserController(RegularuserService service, SystemmanagerService systemmanagerService, Coder coder) {
         this.service = service;
+        this.systemmanagerService = systemmanagerService;
 
         this.coder = coder;
     }
@@ -34,6 +36,15 @@ public class RegularuserController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> findAll(){
         return new ResponseEntity<>(Coder.codeRegular(service.findAll()),HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
+    public boolean postRegular(@RequestParam String username,@RequestParam String name,@RequestParam String password, @RequestParam String licence, @RequestParam String vehicle){
+        if (service.find(username)!=null || systemmanagerService.exists(username)){
+            return false;
+        }
+        service.create(username,name,password,vehicle,licence);
+        return true;
     }
 
     @GetMapping(value = "/full",produces = MediaType.APPLICATION_JSON_VALUE)

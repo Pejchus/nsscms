@@ -6,6 +6,9 @@ import cms.model.Systemmanager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -25,8 +28,8 @@ public class SystemmanagerService {
     }
 
     @Transactional
-    public boolean createUser(String username, String password, String fullName, String license){
-        return dao.createUser(username,password,fullName,license);
+    public boolean createUser(String username, String password, String fullName){
+        return dao.createUser(username,password,fullName);
 
     }
 
@@ -52,6 +55,7 @@ public class SystemmanagerService {
 
 
 
+
     @Transactional
     public boolean autentificate(String username, String password) {
         Systemmanager user = find(username);
@@ -70,4 +74,7 @@ public class SystemmanagerService {
         return dao.findAll();
     }
 
+    public void create(String username, String name, String password) {
+        dao.createUser(username,password,name);
+    }
 }

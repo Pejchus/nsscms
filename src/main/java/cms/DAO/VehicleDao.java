@@ -30,13 +30,13 @@ public class VehicleDao extends baseDao<Vehicle>{
         return em.find(Vehicle.class, id);
     }
 
-    public Vehicle findbyId(String id){
+    public Vehicle findbyId(int id){
         return  em.createQuery("select s from  Vehicle s where s.id = :id" , Vehicle.class).setParameter("id", Integer.valueOf(id)).getSingleResult();
     }
 
     public void assignVehicle(String licensePlate, String username){
         Regularuser user = em.find(Regularuser.class, username);
-        user.setVehicleid(licensePlate);
+       // user.setVehicleid(licensePlate);
         em.persist(user);
     }
 
