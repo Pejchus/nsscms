@@ -28,6 +28,23 @@ public class RegularuserService {
         this.vehicleService = vehicleService;
     }
 
+    @Transactional
+    public void delete(Regularuser user){
+        dao.remove(user);
+    }
+
+    @Transactional
+    public void modify(Regularuser user,String username, String name,String password,String vehicle,String licence){
+        user.setUsername(username);
+        user.setLicensenumber(licence);
+        user.setFullname(name);
+        if(!password.trim().equals("")){
+            user.setPassword(password);
+        }
+        Vehicle v = vehicleService.find(vehicle);
+        user.setVehicleid(v.getId());
+        dao.update(user);
+    }
 
     @Transactional
     public Regularuser find(String username){

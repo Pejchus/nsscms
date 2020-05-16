@@ -43,10 +43,26 @@ public class ManagerController {
 
         return new ResponseEntity<String>(Coder.codeManager(service.findAll()),HttpStatus.OK);
     }
-
+    @GetMapping(value = "/delete",produces = MediaType.APPLICATION_JSON_VALUE)
+    public boolean delete(@RequestParam String username){
+        Systemmanager regularuser =  service.find(username);
+        if(regularuser==null){
+            return false;
+        }
+        service.delete(regularuser);
+        return true;
+    }
     @GetMapping(value = "/full",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> findAllFull(){
         return new ResponseEntity<String>((Coder.codeManagerFull(service.findAll())),HttpStatus.OK);
+    }
+    @RequestMapping(value = "/modify", method = RequestMethod.GET)
+    public boolean update(@RequestParam String previousUsername, @RequestParam String username,@RequestParam String name,@RequestParam String password){
+        if (!service.exists(previousUsername)){
+            return false;
+        }
+        service.modify(service.find(previousUsername), username,name,password);
+        return true;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)

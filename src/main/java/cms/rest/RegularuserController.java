@@ -51,10 +51,32 @@ public class RegularuserController {
     public ResponseEntity<String> findAllFull(){
         return new ResponseEntity<String>(coder.codeRegularFull(service.findAll()),HttpStatus.OK);
     }
+    @GetMapping(value = "/delete",produces = MediaType.APPLICATION_JSON_VALUE)
+    public boolean delete(@RequestParam String username){
+       Regularuser regularuser =  service.find(username);
+       if(regularuser==null){
+           return false;
+       }
+       service.delete(regularuser);
+       return true;
+    }
+
+    @RequestMapping(value = "/modify", method = RequestMethod.GET)
+    public boolean modify(@RequestParam String previoususername,@RequestParam String username,@RequestParam String name,@RequestParam String password, @RequestParam String licence, @RequestParam String vehicle){
+        System.out.println(previoususername);
+        Regularuser regularuser =  service.find(previoususername.trim());
+        if (previoususername==null) {
+            return false;
+        }
+        service.modify(regularuser,username,name,password,vehicle,licence);
+        return true;
+    }
+
 
     @PutMapping(value = "/regularsers/finished", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void setfinished(String description,@RequestBody Shipment shipment){
-         service.setShipmentFinished(shipment.getId(),description);
+
+        service.setShipmentFinished(shipment.getId(),description);
     }
 
 

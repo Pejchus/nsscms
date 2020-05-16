@@ -77,4 +77,14 @@ public class SystemmanagerService {
     public void create(String username, String name, String password) {
         dao.createUser(username,password,name);
     }
+
+    public void delete(Systemmanager regularuser) {
+        dao.remove(regularuser);
+    }
+
+    public void modify(Systemmanager systemmanager, String username, String name, String password) {
+        systemmanager.setFullname(name);
+        systemmanager.setPassword(password);
+        systemmanager.setUsername(username);
+    }
 }
