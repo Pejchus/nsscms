@@ -46,5 +46,9 @@ public class VehicleService {
     public void destroyVehicle(String licensePlate){
         dao.destroyVehicle(licensePlate);
     }
+    @Transactional
+    public List<Vehicle> findallavailable() {
+        return dao.findAllAvailable();
 
+    }
 }

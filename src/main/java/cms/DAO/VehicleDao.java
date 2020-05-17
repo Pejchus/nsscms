@@ -6,6 +6,7 @@ import cms.model.Regularuser;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 import java.util.Objects;
 
 @Repository
@@ -45,5 +46,12 @@ public class VehicleDao extends baseDao<Vehicle>{
         em.getTransaction();
         em.remove(v);
         em.getTransaction().commit();
+    }
+
+    public List<Vehicle> findAllAvailable(){
+        return em.createQuery("select s from  Vehicle s where s.availability = true").getResultList();
+    }
+    public  void create(String username, String name, String licence, String password){
+
     }
 }

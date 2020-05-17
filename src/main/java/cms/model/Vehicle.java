@@ -10,6 +10,15 @@ public class Vehicle {
   private boolean availability;
   @Id
   private String licenseplate;
+  private String driver;
+
+  public String getDriver() {
+    return driver;
+  }
+
+  public void setDriver(String driver) {
+    this.driver = driver;
+  }
 
   public boolean isAvailability() {
     return availability;

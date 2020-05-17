@@ -2,301 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a447e395-87f9-45e4-9c6a-48fadebd8256" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/MessageView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/MsgBoard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/views/NewMessage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/orencjur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orencjur.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/FxmlHandler/SpringFXMLLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/FxmlHandler/StageManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpRequestFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Http/Listener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Http/requests/GetHttp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/Http/requests/HttpRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/controllers/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cmsClient/view/FxmlView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/DAO/RegularuserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/DAO/RegularuserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/DAO/VehicleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/DAO/VehicleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/DAO/baseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/DAO/baseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/model/Regularuser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/model/Regularuser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/rest/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/rest/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/service/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/service/Coder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/service/RegularuserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/service/RegularuserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cms/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cms/service/VehicleService.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@kbss.felk.cvut.cz" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@kbss.felk.cvut.cz" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@kbss.felk.cvut.cz" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ear2019zs_26: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@kbss.felk.cvut.cz" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ear2019zs_26: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@kbss.felk.cvut.cz" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ear2019zs_26: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cms/dao/VehicleDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cms/model/Vehicle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="139" column="59" selection-start-line="139" selection-start-column="59" selection-end-line="139" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/NewMessage.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/MsgBoard.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/MessageView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ebee9d2-4c5c-4c33-9a9c-070723631a9f/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/MainMenuDispatch.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/orencjur.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/cms/Start.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/View/FxmlView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/config/StageManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/logging/ExceptionWriter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/config/AppJavaConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/Login.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/styles/Styles.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/view/FxmlView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/config/SpringFXMLLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/MainMenuDriver.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/MainMenuDriver.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/cmsClient/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cmsClient/controllers/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cms/rest/RegularuserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpRequestFactory.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Cargo management system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Cargo management system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Cargo management system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
+  <component name="ProjectId" id="1bOgHbT4v8rIetd32AxfKggS0y7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="CatdeaLogs" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="orencjur" type="b2602c69:ProjectViewProjectNode" />
-              <item name="orencjur" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -304,9 +67,14 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.6402299" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -320,18 +88,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
-  <component name="RunManager" selected="Maven.eshop [javafx:run]">
+  <component name="RunManager" selected="Maven.eshop [spring-boot:run]">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cmsClient.Client" />
       <module name="orencjur" />
@@ -493,6 +251,18 @@
       <workItem from="1586441929226" duration="2382000" />
       <workItem from="1587395138479" duration="4158000" />
       <workItem from="1588002794287" duration="36644000" />
+      <workItem from="1588508471853" duration="7954000" />
+      <workItem from="1588598697993" duration="734000" />
+      <workItem from="1588669677909" duration="11072000" />
+      <workItem from="1588773447027" duration="5312000" />
+      <workItem from="1588928316447" duration="799000" />
+      <workItem from="1588955347364" duration="7146000" />
+      <workItem from="1589024570171" duration="2522000" />
+      <workItem from="1589194188409" duration="774000" />
+      <workItem from="1589368013905" duration="18000" />
+      <workItem from="1589552299898" duration="6094000" />
+      <workItem from="1589654054714" duration="67000" />
+      <workItem from="1589709071855" duration="8548000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1586442134683</created>
@@ -522,444 +292,185 @@
       <option name="project" value="LOCAL" />
       <updated>1588166755546</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="work progress">
+      <created>1588452866893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588452866893</updated>
+    </task>
+    <task id="LOCAL-00006" summary="many things">
+      <created>1588697465654</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588697465654</updated>
+    </task>
+    <task id="LOCAL-00007" summary="coder fix">
+      <created>1588704299277</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588704299277</updated>
+    </task>
+    <task id="LOCAL-00008" summary="coder fix">
+      <created>1588708237781</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588708237781</updated>
+    </task>
+    <task id="LOCAL-00009" summary="coder fix">
+      <created>1588928364373</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588928364373</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fucking boring">
+      <created>1588965313011</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588965313011</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modify user">
+      <created>1589654100931</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589654100931</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43184000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21321961" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29179648" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32917964" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.2886812" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.41329178" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.32917964" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.119936034" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.523913" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="javafx base" />
     <MESSAGE value="first views" />
     <MESSAGE value="pom fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom fix" />
+    <MESSAGE value="work progress" />
+    <MESSAGE value="many things" />
+    <MESSAGE value="coder fix" />
+    <MESSAGE value="fucking boring" />
+    <MESSAGE value="modify user" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify user" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/13-ea+8/javafx-base-13-ea+8-win.jar!/javafx/util/Callback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/logging/ExceptionWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/AppJavaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/PersistenceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/styles/Styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/eclipselink.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/SpringFXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/config/StageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/MainMenuDriver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="681" selection-start-line="681" selection-end-line="681" />
-          <folding>
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#JFXButton#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#2;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#3;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#4;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#5;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#6;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#0;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#JFXButton#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#2;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#3;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#4;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#5;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#6;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#1;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#JFXButton#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#2;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#3;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#4;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#5;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#6;n#children#0;n#AnchorPane#0;n#content#0;n#Tab#2;n#tabs#0;n#JFXTabPane#0;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#2;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#2;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#2;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#3;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#3;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#3;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#4;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#0;n#children#0;n#AnchorPane#4;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#AnchorPane#1;n#children#0;n#AnchorPane#4;n#children#0;n#AnchorPane#1;n#children#0;n#AnchorPane#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/FxmlHandler/SpringFXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/rest/LoginRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/rest/RegularuserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Http/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/view/FxmlView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/MainMenuDriver.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/ShipmentManagement.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/FxmlHandler/StageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Http/Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cms/dao/VehicleDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cms/model/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Http/HttpRequestFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/MainMenuDispatch.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/orencjur.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cmsClient/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="139" column="59" selection-start-line="139" selection-start-column="59" selection-end-line="139" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ebee9d2-4c5c-4c33-9a9c-070723631a9f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/NewMessage.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/MsgBoard.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/MessageView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="WindowStateProjectService">
+    <state x="895" y="441" width="187" height="222" key="#Assign_Data_Sources" timestamp="1589725286524">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="895" y="441" width="187" height="222" key="#Assign_Data_Sources/67.27.1853.1053@67.27.1853.1053" timestamp="1589725286524" />
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure" timestamp="1588777977683">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1588777977683" />
+    <state x="801" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1589714235430">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="801" y="256" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589714235430" />
+    <state x="746" y="420" width="494" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588671161716">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="746" y="420" width="494" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/67.27.1853.1053@67.27.1853.1053" timestamp="1588671161716" />
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588512946128">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1588512946128" />
+    <state x="532" y="100" width="912" height="904" key="CommitChangelistDialog2" timestamp="1589654100752">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="532" y="100" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1589654100752" />
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1589725937239">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589725937239" />
+    <state width="1807" height="278" key="GridCell.Tab.0.center" timestamp="1589725937238">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589725937238" />
+    <state width="1807" height="278" key="GridCell.Tab.0.left" timestamp="1589725937238">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589725937238" />
+    <state width="1807" height="278" key="GridCell.Tab.0.right" timestamp="1589725937238">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589725937238" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1588966285456">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1588966285456" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1588966285456">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1588966285456" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1588966285456">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1588966285456" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1588966285456">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1588966285456" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1588452722657">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1853.1053@67.27.1853.1053" timestamp="1588452722657" />
+    <state x="476" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1588778047558">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="476" y="130" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1588778047558" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1589654108175">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1589654108175" />
+    <state x="576" y="210" width="824" height="684" key="com.intellij.database.dbimport.ImportDialog" timestamp="1589715997565">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="576" y="210" width="824" height="684" key="com.intellij.database.dbimport.ImportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589715997565" />
+    <state x="726" y="360" width="524" height="384" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1589715993853">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="360" width="524" height="384" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589715993853" />
+    <state x="816" y="324" width="344" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588960990618">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="816" y="324" width="344" height="457" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1588960990618" />
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1588778289046">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1588778289046" />
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589725286914">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589725286914" />
+    <state x="765" y="467" width="447" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589552303296">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="765" y="467" width="447" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1589552303296" />
+    <state x="689" y="310" width="598" height="485" key="refactoring.ChangeSignatureDialog" timestamp="1589725529360">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="689" y="310" width="598" height="485" key="refactoring.ChangeSignatureDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1589725529360" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1588527815937">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1588527815937" />
   </component>
 </project>

@@ -1,8 +1,6 @@
 package cms.model;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @DiscriminatorValue("RUSER")
@@ -13,7 +11,8 @@ public class Regularuser extends Userbase{
 
   private String fullname;
   private String password;
-  private int vehicleid;
+  @Column
+  private Integer vehicleid;
   private String licensenumber;
 
 
@@ -44,11 +43,11 @@ public class Regularuser extends Userbase{
   }
 
 
-  public int getVehicleid() {
+  public Integer getVehicleid() {
     return vehicleid;
   }
 
-  public void setVehicleid(int vehicleid) {
+  public void setVehicleid(Integer vehicleid) {
     this.vehicleid = vehicleid;
   }
 

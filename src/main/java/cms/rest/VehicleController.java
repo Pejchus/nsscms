@@ -35,6 +35,27 @@ public class VehicleController {
             System.out.println(result);
         return new ResponseEntity<>(result,HttpStatus.OK);
     }
+    @RequestMapping(value = "/vehicles/available", method = RequestMethod.GET)
+    public ResponseEntity<String> getFreeVehicles(){
+        List<Vehicle> vehicles = vehicleService.findallavailable();
+        String result ="";
+        for (Vehicle v:vehicles){
+            result = result +v.getLicenseplate()+"@";
+        }
+        System.out.println(result);
+        return new ResponseEntity<>(result,HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/vehicle-driver", method = RequestMethod.GET)
+    public ResponseEntity<String> getVehiclesWithDriver(){
+        List<Vehicle> vehicles = vehicleService.findall();
+        String result ="";
+        for (Vehicle v:vehicles){
+            result = result +v.getLicenseplate()+"@"+v.getDriver()+"@";
+        }
+        System.out.println(result);
+        return new ResponseEntity<>(result,HttpStatus.OK);
+    }
 
 
 

@@ -70,8 +70,14 @@ public class RegularuserService {
 
     @Transactional
     public void create(String username, String name,String password,String vehicle,String licence){
+
         Vehicle v = vehicleService.find(vehicle);
-        dao.create(username, name, v.getId(), licence,password);
+        if(v!=null) {
+            dao.create(username, name, v.getId(), licence, password);
+            v.setDriver(username);
+            v.setAvailability(false);
+        }else {dao.create(username,name,licence,password);}
+
     }
 
     @Transactional

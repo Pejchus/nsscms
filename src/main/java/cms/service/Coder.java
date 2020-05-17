@@ -59,7 +59,12 @@ public class Coder {
         String result ="";
         int i = 0;
         for (Regularuser r:list){
-            String vehicle = vehicleService.findById(r.getVehicleid()).getLicenseplate();
+            String vehicle;
+            if(r.getVehicleid()!=null){
+                vehicle=vehicleService.findById(r.getVehicleid()).getLicenseplate();
+            }else {
+                vehicle="none";
+            }
             result = result + r.getFullname()+"@"+r.getUsername()+"@"+vehicle+"@"+r.getLicensenumber()+"@"+"true"+"@";
             i++;
         }

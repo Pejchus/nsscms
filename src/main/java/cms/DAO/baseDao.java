@@ -1,6 +1,7 @@
 package cms.DAO;
 
 
+import cms.model.Vehicle;
 import org.springframework.core.annotation.Order;
 
 import javax.persistence.EntityManager;
@@ -86,5 +87,8 @@ public abstract class baseDao<T> implements genericDao<T> {
     public boolean exists(Integer id) {
         return id != null && em.find(type, id) != null;
     }
+
+
+
 }
 
