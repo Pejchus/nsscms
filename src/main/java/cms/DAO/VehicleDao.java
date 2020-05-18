@@ -19,11 +19,12 @@ public class VehicleDao extends baseDao<Vehicle>{
         super(Vehicle.class);
     }
 
-    public void createVehicle(String licensePlate) throws Exception{
+    public Vehicle createVehicle(String licensePlate) throws Exception{
             Vehicle v = new Vehicle();
             v.setAvailability(true);
             v.setLicenseplate(licensePlate);
             em.persist(v);
+            return v;
     }
 
     public Vehicle find(String id){
@@ -31,7 +32,7 @@ public class VehicleDao extends baseDao<Vehicle>{
         return em.find(Vehicle.class, id);
     }
 
-    public Vehicle findbyId(int id){
+    public Vehicle findbyId(Integer id){
         return  em.createQuery("select s from  Vehicle s where s.id = :id" , Vehicle.class).setParameter("id", Integer.valueOf(id)).getSingleResult();
     }
 

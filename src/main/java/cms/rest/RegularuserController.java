@@ -46,6 +46,18 @@ public class RegularuserController {
         service.create(username,name,password,vehicle,licence);
         return true;
     }
+    @GetMapping(value = "/name/available",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> findAvailableNames(){
+        return new ResponseEntity<String>(coder.codeRegular(service.findAvailable()),HttpStatus.OK);
+    }
+
+
+
+    @GetMapping(value = "/name/truckless",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> findTruckLessName(){
+        return new ResponseEntity<String>(coder.codeRegular(service.findTruckless()),HttpStatus.OK);
+    }
+
 
     @GetMapping(value = "/full",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> findAllFull(){

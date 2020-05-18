@@ -30,7 +30,9 @@ public class RegularuserService {
 
     @Transactional
     public void delete(Regularuser user){
-        dao.remove(user);
+        assignVehicle(user.getUsername(),null);
+        vehicleService.assignVehicle(user.getVehicleid(),null);
+
     }
 
     @Transactional
@@ -40,9 +42,10 @@ public class RegularuserService {
         user.setFullname(name);
         if(!password.trim().equals("")){
             user.setPassword(password);
+        }if(vehicle!=null) {
+            Vehicle v = vehicleService.findById(Integer.valueOf(vehicle));
+            user.setVehicleid(v.getId());
         }
-        Vehicle v = vehicleService.find(vehicle);
-        user.setVehicleid(v.getId());
         dao.update(user);
     }
 
@@ -69,6 +72,16 @@ public class RegularuserService {
     }
 
     @Transactional
+    public List<Regularuser> findAvailable(){
+        return dao.findAvailable();
+    }
+    @Transactional
+    public void assignVehicle(String username,String vehicle){
+        Regularuser user = find(username);
+        modify(user,user.getUsername(),user.getFullname(),user.getPassword(),vehicle,user.getLicensenumber());
+    }
+
+    @Transactional
     public void create(String username, String name,String password,String vehicle,String licence){
 
         Vehicle v = vehicleService.find(vehicle);
@@ -91,5 +104,9 @@ public class RegularuserService {
             return true;
         }
         return false;
+    }
+
+    public List<Regularuser> findTruckless() {
+       return dao.truckLess();
     }
 }

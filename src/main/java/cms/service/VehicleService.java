@@ -1,8 +1,9 @@
 package cms.service;
 
 
-import cms.DAO.ShipmentDao;
+import cms.DAO.RegularuserDao;
 import cms.DAO.VehicleDao;
+import cms.model.Regularuser;
 import cms.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,16 +15,24 @@ import java.util.List;
 public class VehicleService {
 
     private final VehicleDao dao;
+    private final RegularuserDao regularuserDao;
 
     @Autowired
-    public VehicleService(VehicleDao dao) {
+    public VehicleService(VehicleDao dao,  RegularuserDao regularuserDao) {
         this.dao = dao;
+        this.regularuserDao = regularuserDao;
     }
 
     @Transactional
-    public void createVehicle (String licensePlate)throws Exception{
-        dao.createVehicle(licensePlate);
+    public void createVehicle (String licensePlate,String user)throws Exception{
+        Vehicle v = dao.createVehicle(licensePlate);
+        assignVehicle(v.getId(),user);
+        Regularuser regularuser = regularuserDao.find(user);
+        regularuser.setVehicleid(v.getId());
+        regularuserDao.update(regularuser);
     }
+
+
 
     @Transactional
     public List<Vehicle> findall(){
@@ -34,14 +43,17 @@ public class VehicleService {
         return dao.find(licensePlate);
     }
     @Transactional
-    public Vehicle findById(int licensePlate){
-        return dao.findbyId(licensePlate);
+    public Vehicle findById(Integer id){
+        return dao.findbyId(id);
+    }
+    @Transactional
+    public void assignVehicle(Integer id, String username){
+        Vehicle v =dao.findbyId(id);
+
+        v.setDriver(username);
+        dao.update(v);
     }
 
-    @Transactional
-    public void assignVehicle(String licensePlate, String username){
-        dao.assignVehicle(licensePlate,username);
-    }
     @Transactional
     public void destroyVehicle(String licensePlate){
         dao.destroyVehicle(licensePlate);

@@ -10,6 +10,7 @@ public class Vehicle {
   private boolean availability;
   @Id
   private String licenseplate;
+  @Column
   private String driver;
 
   public String getDriver() {

@@ -65,7 +65,7 @@ public class Coder {
             }else {
                 vehicle="none";
             }
-            result = result + r.getFullname()+"@"+r.getUsername()+"@"+vehicle+"@"+r.getLicensenumber()+"@"+"true"+"@";
+            result = result + r.getFullname()+"@"+r.getUsername()+"@"+vehicle+"@"+r.getLicensenumber()+"@"+r.isAvailibility()+"@";
             i++;
         }
         return result;

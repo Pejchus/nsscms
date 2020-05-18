@@ -23,6 +23,13 @@ public class RegularuserDao extends baseDao<Regularuser>{
         return em.find(Regularuser.class, username);
     }
 
+    public List<Regularuser> findAvailable(){
+        return em.createQuery("select s from  Regularuser s where s.availibility = true").getResultList();
+    }
+
+    public List<Regularuser> truckLess(){
+        return em.createQuery("select s from  Regularuser s where s.vehicleid is null ").getResultList();
+    }
     public void create(String username,String name, int vehicleId, String licence,String pass){
         Regularuser user = new Regularuser();
         user.setFullname(name);

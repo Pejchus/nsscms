@@ -14,7 +14,15 @@ public class Regularuser extends Userbase{
   @Column
   private Integer vehicleid;
   private String licensenumber;
+  private boolean availibility;
 
+  public boolean isAvailibility() {
+    return availibility;
+  }
+
+  public void setAvailibility(boolean availibility) {
+    this.availibility = availibility;
+  }
 
   public String getUsername() {
     return username;
