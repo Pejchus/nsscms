@@ -7,12 +7,31 @@ import javax.persistence.*;
 public class Shipment {
 
   private String cargo;
-  private String vehicle;
+
+  public String getDriver() {
+    return driver;
+  }
+
+  public void setDriver(String driver) {
+    this.driver = driver;
+  }
+
+  private String driver;
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
   private String status;
   private String destination;
+
+  public String getShippingdate() {
+    return shippingdate;
+  }
+
+  public void setShippingdate(String shippingdate) {
+    this.shippingdate = shippingdate;
+  }
+
+  private String shippingdate;
 
 
   public String getCargo() {
@@ -24,13 +43,7 @@ public class Shipment {
   }
 
 
-  public String getVehicle() {
-    return vehicle;
-  }
 
-  public void setVehicle(String assignedvehicle) {
-    this.vehicle = assignedvehicle;
-  }
 
 
   public Integer getId() {

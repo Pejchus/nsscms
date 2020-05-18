@@ -30,9 +30,11 @@ public class RegularuserService {
 
     @Transactional
     public void delete(Regularuser user){
-        assignVehicle(user.getUsername(),null);
         vehicleService.assignVehicle(user.getVehicleid(),null);
-
+        user.setVehicleid(null);
+        user.setPassword(null);
+        user.setAvailibility(false);
+        dao.update(user);
     }
 
     @Transactional
@@ -49,6 +51,7 @@ public class RegularuserService {
         dao.update(user);
     }
 
+
     @Transactional
     public Regularuser find(String username){
         return dao.find(username);
@@ -63,7 +66,6 @@ public class RegularuserService {
     public void setShipmentFinished(Integer id, String description){
         dao.setShipmentFinished(id);
         Shipment shipment = shipmentdao.find(id);
-        archivedao.archiveShipment(id,description,shipment.getStatus());
         shipmentdao.deleteShipment(id);
     }
     @Transactional

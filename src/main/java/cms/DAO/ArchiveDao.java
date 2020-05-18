@@ -36,21 +36,6 @@ public class ArchiveDao extends baseDao<Archive>{
         Objects.requireNonNull(id);
         return em.find(Shipment.class, id);
     }
-    public boolean archiveShipment(Integer id, String description, String status){
-        Shipment s = findShipment(id);
-        Archive a = new Archive();
-        a.setAssignedvehicle(s.getVehicle());
-        a.setCargo(s.getCargo());
-        a.setDescription(description);
-        a.setStatus(status);
-        a.setId(s.getId());
-        a.setDestination(s.getDestination());
-        try {
-            em.persist(a);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
-    }
+
 
 }

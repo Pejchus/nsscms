@@ -73,7 +73,7 @@ public class Coder {
     public static String codeShipment(List<Shipment> list){
         String result ="";
         for (Shipment m:list){
-            //result = result +m.+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@";
+            result = result +m.getShippingdate()+"@"+m.getStatus()+"@"+m.getCargo()+"@"+m.getDriver()+"@"+m.getDestination()+"@";
         }
         return result;
     }

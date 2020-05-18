@@ -1,6 +1,7 @@
 package cms.rest;
 
 import cms.model.Shipment;
+import cms.service.Coder;
 import cms.service.ShipmentService;
 import cms.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,22 +28,30 @@ public class ShipmentController {
     @RequestMapping(value = "/createshipment", method = RequestMethod.GET)
     public void postShipment(@RequestParam String cargo,@RequestParam String date,@RequestParam String vehicle, @RequestParam String destination){
         System.out.println(cargo);
-         shipmentService.createShipment(cargo,destination,vehicle);
+         shipmentService.createShipment(cargo,destination,vehicle,date);
     }
 
     @RequestMapping(value = "/activeshipment", method = RequestMethod.GET)
     public ResponseEntity<String> activeShipment(){
-        return new ResponseEntity<>("jebu@ti na to@zlomim si s tim mozek@ty datumy vyprcany@udelej si@to sam do pici@", HttpStatus.OK);
+        return new ResponseEntity<>(Coder.codeShipment(shipmentService.findactive("")), HttpStatus.OK);
+    }
+    @RequestMapping(value = "/activeshipment/driver", method = RequestMethod.GET)
+    public ResponseEntity<String> activeShipment(@RequestParam String driver){
+        return new ResponseEntity<>(Coder.codeShipment(shipmentService.findactive(driver)), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/shipment", method = RequestMethod.GET)
     public ResponseEntity<String> shipment(){
-        return new ResponseEntity<>("jebu@ti na to@zlomim si s tim mozek@ty datumy vyprcany@udelej si@to sam do pici@", HttpStatus.OK);
+        return new ResponseEntity<>(Coder.codeShipment(shipmentService.findAll()), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/inactiveShipment", method = RequestMethod.GET)
-    public ResponseEntity<String> Shipment(){
-        return new ResponseEntity<>("jebu@ti na to@zlomim si s tim mozek@ty datumy vyprcany@udelej si@to sam do pici@", HttpStatus.OK);
+    public ResponseEntity<String> shipmentInactive(){
+        return new ResponseEntity<>(Coder.codeShipment(shipmentService.findfinish("")), HttpStatus.OK);
+    }
+    @RequestMapping(value = "/inactiveShipment/driver", method = RequestMethod.GET)
+    public ResponseEntity<String> shipmentInactive(@RequestParam String driver){
+        return new ResponseEntity<>(Coder.codeShipment(shipmentService.findfinish(driver)), HttpStatus.OK);
     }
 
 

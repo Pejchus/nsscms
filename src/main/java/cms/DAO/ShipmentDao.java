@@ -26,8 +26,9 @@ public class ShipmentDao extends baseDao<Shipment>{
         return em.createQuery("SELECT s FROM Shipment s WHERE s.id IS NOT NULL", Shipment.class).getResultList();
     }
 
-    public List<Shipment> findByStatus(String status){
-        return em.createQuery("SELECT s FROM Shipment s WHERE s.status like :status", Shipment.class).setParameter("status",status).getResultList();
+    public List<Shipment> findByStatus(String status,String driver){
+        driver = "%" + driver + "%";
+        return em.createQuery("SELECT s FROM Shipment s WHERE s.status like :status and s.driver like :driver", Shipment.class).setParameter("status",status).setParameter("driver",driver).getResultList();
     }
     public boolean setStatus(String status, Integer id){
         Shipment s = find(id);
@@ -52,12 +53,13 @@ public class ShipmentDao extends baseDao<Shipment>{
         }
     }
 
-    public void createShipment(String cargo,  String destination,String vehicle){
+    public void createShipment(String cargo,  String destination,String vehicle,String date){
         Shipment s = new Shipment();
-        s.setStatus("Pending");
+        s.setStatus("active");
         s.setDestination(destination);
         s.setCargo(cargo);
-        s.setVehicle( vehicle);
+        s.setDriver(vehicle);
+        s.setShippingdate(date);
         persist(s);
     }
 

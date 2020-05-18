@@ -1,6 +1,8 @@
 package cms.service;
 
+import cms.DAO.RegularuserDao;
 import cms.DAO.ShipmentDao;
+import cms.model.Regularuser;
 import cms.model.Shipment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +14,12 @@ import java.util.List;
 public class ShipmentService {
 
     private final ShipmentDao dao;
+    private final RegularuserDao regularuserDao;
 
     @Autowired
-    public ShipmentService(ShipmentDao dao) {
+    public ShipmentService(ShipmentDao dao, RegularuserDao regularuserService) {
         this.dao = dao;
+        this.regularuserDao = regularuserService;
     }
 
     @Transactional(readOnly = true)
@@ -27,10 +31,7 @@ public class ShipmentService {
        return dao.findAll();
     }
 
-    @Transactional
-    public List<Shipment> findByStatus(String status){
-        return dao.findByStatus(status);
-    }
+
     @Transactional
     public boolean setStatus(String status, Integer id){
         return dao.setStatus(status,id);
@@ -43,9 +44,20 @@ public class ShipmentService {
 
 
     @Transactional
-    public void createShipment(String cargo,  String destination,String vehicle){
+    public void createShipment(String cargo,  String destination,String driver,String date){
+        Regularuser user = regularuserDao.find(driver);
+        user.setAvailibility(false);
+        regularuserDao.update(user);
+        dao.createShipment(cargo,destination,driver,date);
+    }
+    @Transactional
+    public List<Shipment> findactive(String driver) {
+       return dao.findByStatus("active",driver);
+    }
 
-        dao.createShipment(cargo,destination,vehicle);
+    @Transactional
+    public List<Shipment> findfinish(String driver) {
+        return dao.findByStatus("finished",driver);
     }
 
 }

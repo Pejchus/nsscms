@@ -52,7 +52,7 @@ public class SystemmanagerDao extends baseDao<Systemmanager>{
     }
 
     public boolean processShipment(Integer id, String licensePlate){
-        Objects.requireNonNull(id);
+     /*   Objects.requireNonNull(id);
         Shipment s = em.find(Shipment.class, id);
         s.setVehicle(licensePlate);
         em.getTransaction();
@@ -62,6 +62,8 @@ public class SystemmanagerDao extends baseDao<Systemmanager>{
             return true;
         }catch(Exception e){
             return false;
-        }
+        }*/
+        return true;
     }
+
 }
