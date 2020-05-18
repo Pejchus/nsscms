@@ -19,13 +19,15 @@ public class RegularuserService {
     private final ArchiveDao archivedao;
     private final ShipmentDao shipmentdao;
     private final VehicleService vehicleService;
+    private final ShipmentService shipmentService;
 
     @Autowired
-    public RegularuserService(RegularuserDao dao, ArchiveDao archivedao, ShipmentDao shipmentdao, VehicleService vehicleService) {
+    public RegularuserService(RegularuserDao dao, ArchiveDao archivedao, ShipmentDao shipmentdao, VehicleService vehicleService, ShipmentDao shipmentDao, ShipmentService shipmentService) {
         this.archivedao=archivedao;
         this.shipmentdao=shipmentdao;
         this.dao = dao;
         this.vehicleService = vehicleService;
+        this.shipmentService = shipmentService;
     }
 
     @Transactional
@@ -35,6 +37,7 @@ public class RegularuserService {
         user.setPassword(null);
         user.setAvailibility(false);
         dao.update(user);
+        shipmentService.setfinish(user.getUsername());
     }
 
     @Transactional
@@ -42,11 +45,14 @@ public class RegularuserService {
         user.setUsername(username);
         user.setLicensenumber(licence);
         user.setFullname(name);
-        if(!password.trim().equals("")){
+        if(!password.equals("")){
             user.setPassword(password);
         }if(vehicle!=null) {
-            Vehicle v = vehicleService.findById(Integer.valueOf(vehicle));
+            Vehicle v = vehicleService.find(vehicle);
             user.setVehicleid(v.getId());
+            user.setAvailibility(true);
+        }else {
+            user.setAvailibility(false);
         }
         dao.update(user);
     }

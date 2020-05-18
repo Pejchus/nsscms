@@ -30,11 +30,11 @@ public class RegularuserDao extends baseDao<Regularuser>{
     public List<Regularuser> truckLess(){
         return em.createQuery("select s from  Regularuser s where s.vehicleid is null ").getResultList();
     }
-    public void create(String username,String name, int vehicleId, String licence,String pass){
+    public void create(String username,String name, Integer vehicleId, String licence,String pass){
         Regularuser user = new Regularuser();
         user.setFullname(name);
         user.setPassword(pass);
-        user.setVehicleid(vehicleId);
+        user.setAvailibility(true);
         user.setLicensenumber(licence);
         user.setUsername(username);
         persist(user);
@@ -46,6 +46,7 @@ public class RegularuserDao extends baseDao<Regularuser>{
         user.setVehicleid(null);
         user.setLicensenumber(licence);
         user.setUsername(username);
+        user.setAvailibility(false);
         persist(user);
     }
 

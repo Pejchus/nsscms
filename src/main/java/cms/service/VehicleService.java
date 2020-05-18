@@ -29,6 +29,7 @@ public class VehicleService {
         assignVehicle(v.getId(),user);
         Regularuser regularuser = regularuserDao.find(user);
         regularuser.setVehicleid(v.getId());
+        regularuser.setAvailibility(true);
         regularuserDao.update(regularuser);
     }
 

@@ -53,6 +53,12 @@ public class ShipmentController {
     public ResponseEntity<String> shipmentInactive(@RequestParam String driver){
         return new ResponseEntity<>(Coder.codeShipment(shipmentService.findfinish(driver)), HttpStatus.OK);
     }
+    @RequestMapping(value = "/finished", method = RequestMethod.GET)
+    public ResponseEntity<String> shipmentFinished(@RequestParam String driver){
+        shipmentService.setfinish(driver);
+        System.out.println("kokot");
+        return new ResponseEntity<>("true", HttpStatus.OK);
+    }
 
 
 

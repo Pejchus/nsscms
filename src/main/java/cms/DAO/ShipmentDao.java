@@ -27,7 +27,9 @@ public class ShipmentDao extends baseDao<Shipment>{
     }
 
     public List<Shipment> findByStatus(String status,String driver){
+        driver=driver.trim();
         driver = "%" + driver + "%";
+        System.out.println(driver);
         return em.createQuery("SELECT s FROM Shipment s WHERE s.status like :status and s.driver like :driver", Shipment.class).setParameter("status",status).setParameter("driver",driver).getResultList();
     }
     public boolean setStatus(String status, Integer id){

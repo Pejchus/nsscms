@@ -60,4 +60,14 @@ public class ShipmentService {
         return dao.findByStatus("finished",driver);
     }
 
+    @Transactional
+    public void setfinish(String driver) {
+        List<Shipment> shipments = dao.findByStatus("active",driver);
+        for (Shipment s : shipments){
+            System.out.println("kokot");
+            s.setStatus("finished");
+            dao.update(s);
+        }
+    }
+
 }
