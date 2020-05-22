@@ -36,6 +36,17 @@ public class MessageController {
         return new ResponseEntity<>("true", HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/message/delete",method = RequestMethod.GET)
+    public ResponseEntity<String> delete(@RequestParam String id){
+        messageService.delete(id);
+        return new ResponseEntity<>("true", HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/message/deleteold",method = RequestMethod.GET)
+    public ResponseEntity<String> deleteold(@RequestParam String user){
+        messageService.deleteold(user,"DISPATCH");
+        return new ResponseEntity<>("true", HttpStatus.OK);
+    }
 
 
 }

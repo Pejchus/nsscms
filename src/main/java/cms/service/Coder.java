@@ -19,7 +19,7 @@ public class Coder {
     public static String codeDriverMessage(List<Message> list){
         String result ="";
         for (Message m:list){
-            result = result +m.getDispatcher()+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@";
+            result = result +m.getDispatcher()+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@"+m.getId()+"@";
         }
         return result;
     }
@@ -27,7 +27,7 @@ public class Coder {
     public static String codeDispatchMessage(List<Message> list){
         String result ="";
         for (Message m:list){
-            result = result +m.getDriver()+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@";
+            result = result +m.getDriver()+"@"+m.getTime().toString()+"@"+m.getContent()+"@"+m.getSender()+"@"+m.getId()+"@";
         }
         return result;
     }

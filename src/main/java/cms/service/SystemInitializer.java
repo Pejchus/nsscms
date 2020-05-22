@@ -37,11 +37,11 @@ public class SystemInitializer {
 
     @PostConstruct
     private void initSystem() {
-        TransactionTemplate txTemplate = new TransactionTemplate(txManager);
+       /* TransactionTemplate txTemplate = new TransactionTemplate(txManager);
         txTemplate.execute((status) -> {
             generateSystemmanager();
             return null;
-        });
+        });*/
     }
 
     /**
