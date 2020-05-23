@@ -54,9 +54,44 @@ public class VehicleController {
             }
             return new ResponseEntity<>("true",HttpStatus.OK);
         } catch (Exception e) {
-            e.printStackTrace();
             return new ResponseEntity<>("false",HttpStatus.OK);
         }
+    }
+    @RequestMapping(value = "/vehicle/modify", method = RequestMethod.GET)
+    public ResponseEntity<String> modifyVehicle(@RequestParam String vehicle,@RequestParam String driver){
+            if(driver.equals("null")){
+                return new ResponseEntity<>("false",HttpStatus.OK);
+            }
+            try {
+                vehicleService.assignVehicle(vehicle,driver);
+                regularuserService.assignVehicle(driver,vehicle);
+                return new ResponseEntity<>("true",HttpStatus.OK);
+            } catch (Exception e) {
+                return new ResponseEntity<>("false",HttpStatus.OK);
+     }
+
+    }
+    @RequestMapping(value = "/vehicle/unassigne", method = RequestMethod.GET)
+    public ResponseEntity<String> unassigneVehicle(@RequestParam String vehicle){
+        try {
+            regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+            vehicleService.assignVehicle(vehicle,null);
+            return new ResponseEntity<>("true",HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("false",HttpStatus.OK);
+        }
+
+    }
+    @RequestMapping(value = "/vehicle/remove", method = RequestMethod.GET)
+    public ResponseEntity<String> deleteVehicle(@RequestParam String vehicle){
+        try {
+            regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+            vehicleService.destroyVehicle(vehicle);
+            return new ResponseEntity<>("true",HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("false",HttpStatus.OK);
+        }
+
     }
 
     @RequestMapping(value = "/vehicle-driver", method = RequestMethod.GET)
