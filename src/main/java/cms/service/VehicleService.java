@@ -25,12 +25,7 @@ public class VehicleService {
 
     @Transactional
     public void createVehicle (String licensePlate,String user)throws Exception{
-        Vehicle v = dao.createVehicle(licensePlate);
-        assignVehicle(v.getId(),user);
-        Regularuser regularuser = regularuserDao.find(user);
-        regularuser.setVehicleid(v.getId());
-        regularuser.setAvailibility(true);
-        regularuserDao.update(regularuser);
+        dao.createVehicle(licensePlate,user);
     }
 
 
@@ -48,9 +43,8 @@ public class VehicleService {
         return dao.findbyId(id);
     }
     @Transactional
-    public void assignVehicle(Integer id, String username){
-        Vehicle v =dao.findbyId(id);
-
+    public void assignVehicle(String vehicle, String username){
+        Vehicle v =dao.find(vehicle);
         v.setDriver(username);
         dao.update(v);
     }

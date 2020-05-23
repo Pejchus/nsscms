@@ -1,15 +1,11 @@
 package cms.rest;
 
-import cms.model.Regularuser;
-import cms.model.Shipment;
 import cms.model.Vehicle;
 import cms.service.RegularuserService;
 import cms.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.remoting.jaxws.SimpleHttpServerJaxWsServiceExporter;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,12 +15,13 @@ public class VehicleController {
 
 
         private final VehicleService vehicleService;
-
+        private final RegularuserService regularuserService;
 
         @Autowired
-        public VehicleController(VehicleService vehicleService) {
+        public VehicleController(VehicleService vehicleService, RegularuserService regularuserService) {
             this.vehicleService = vehicleService;
 
+            this.regularuserService = regularuserService;
         }
     @RequestMapping(value = "/vehicles", method = RequestMethod.GET)
     public ResponseEntity<String> getvehicles(){
@@ -49,9 +46,15 @@ public class VehicleController {
     @RequestMapping(value = "/vehicles/create", method = RequestMethod.GET)
     public ResponseEntity<String> createVehicle(@RequestParam String licence,@RequestParam String driver){
         try {
-            vehicleService.createVehicle(licence,driver);
+            if(driver.equals("null")){
+                vehicleService.createVehicle(licence,null);
+            }else {
+                vehicleService.createVehicle(licence, driver);
+                regularuserService.assignVehicle(driver,licence);
+            }
             return new ResponseEntity<>("true",HttpStatus.OK);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>("false",HttpStatus.OK);
         }
     }

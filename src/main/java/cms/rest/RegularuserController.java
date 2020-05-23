@@ -76,6 +76,7 @@ public class RegularuserController {
     @RequestMapping(value = "/modify", method = RequestMethod.GET)
     public boolean modify(@RequestParam String previoususername,@RequestParam String username,@RequestParam String name,@RequestParam String password, @RequestParam String licence, @RequestParam String vehicle){
         System.out.println(previoususername);
+
         Regularuser regularuser =  service.find(previoususername.trim());
         if (previoususername==null) {
             return false;

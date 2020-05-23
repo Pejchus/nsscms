@@ -19,11 +19,12 @@ public class VehicleDao extends baseDao<Vehicle>{
         super(Vehicle.class);
     }
 
-    public Vehicle createVehicle(String licensePlate) throws Exception{
+    public Vehicle createVehicle(String licensePlate,String driver) throws Exception{
             Vehicle v = new Vehicle();
             v.setAvailability(true);
             v.setLicenseplate(licensePlate);
-            em.persist(v);
+            v.setDriver(driver);
+            persist(v);
             return v;
     }
 
@@ -52,7 +53,7 @@ public class VehicleDao extends baseDao<Vehicle>{
     }
 
     public List<Vehicle> findAllAvailable(){
-        return em.createQuery("select s from  Vehicle s where s.availability = true").getResultList();
+        return em.createQuery("select s from  Vehicle s where s.driver is null ").getResultList();
     }
     public  void create(String username, String name, String licence, String password){
 

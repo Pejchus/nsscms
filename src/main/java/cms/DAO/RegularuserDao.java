@@ -37,6 +37,7 @@ public class RegularuserDao extends baseDao<Regularuser>{
         user.setAvailibility(true);
         user.setLicensenumber(licence);
         user.setUsername(username);
+        user.setVehicleid(vehicleId);
         persist(user);
     }
     public void create(String username,String name, String licence,String pass){

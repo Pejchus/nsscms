@@ -32,7 +32,7 @@ public class RegularuserService {
 
     @Transactional
     public void delete(Regularuser user){
-        vehicleService.assignVehicle(user.getVehicleid(),null);
+        vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(),null);
         user.setVehicleid(null);
         user.setPassword(null);
         user.setAvailibility(false);
@@ -47,14 +47,28 @@ public class RegularuserService {
         user.setFullname(name);
         if(!password.equals("")){
             user.setPassword(password);
-        }if(vehicle!=null) {
+        }System.out.println(vehicle);
+        if(user.getVehicleid()!=null) {
+            unassigne(user);
+        }
+        if(!vehicle.equals("null") && !vehicle.equals("none")) {
             Vehicle v = vehicleService.find(vehicle);
             user.setVehicleid(v.getId());
             user.setAvailibility(true);
+            vehicleService.assignVehicle(vehicle,username);
         }else {
+
             user.setAvailibility(false);
+            user.setVehicleid(null);
         }
         dao.update(user);
+    }
+
+    private void unassigne(Regularuser user){
+        try {
+            vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(),null);
+        }catch (Exception e){
+        }
     }
 
 

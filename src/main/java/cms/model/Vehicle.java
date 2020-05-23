@@ -6,7 +6,7 @@ import javax.persistence.*;
 @DiscriminatorValue("VEHICLE")
 public class Vehicle {
 
-  private long shipmentid;
+  private Integer shipmentid;
   private boolean availability;
   @Id
   private String licenseplate;
@@ -33,6 +33,7 @@ public class Vehicle {
     this.id = id;
   }
 
+  @GeneratedValue
   private int id;
 
 
@@ -42,7 +43,7 @@ public class Vehicle {
     return shipmentid;
   }
 
-  public void setShipmentid(long shipmentid) {
+  public void setShipmentid(Integer shipmentid) {
     this.shipmentid = shipmentid;
   }
 
