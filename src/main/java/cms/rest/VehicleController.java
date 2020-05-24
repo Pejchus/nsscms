@@ -62,6 +62,9 @@ public class VehicleController {
             if(driver.equals("null")){
                 return new ResponseEntity<>("false",HttpStatus.OK);
             }
+        try {
+            regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+        } catch (Exception e) {}
             try {
                 vehicleService.assignVehicle(vehicle,driver);
                 regularuserService.assignVehicle(driver,vehicle);
@@ -74,10 +77,13 @@ public class VehicleController {
     @RequestMapping(value = "/vehicle/unassigne", method = RequestMethod.GET)
     public ResponseEntity<String> unassigneVehicle(@RequestParam String vehicle){
         try {
+            try {
             regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+        } catch (Exception e) {}
             vehicleService.assignVehicle(vehicle,null);
             return new ResponseEntity<>("true",HttpStatus.OK);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>("false",HttpStatus.OK);
         }
 
@@ -85,10 +91,13 @@ public class VehicleController {
     @RequestMapping(value = "/vehicle/remove", method = RequestMethod.GET)
     public ResponseEntity<String> deleteVehicle(@RequestParam String vehicle){
         try {
-            regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+            try {
+                regularuserService.assignVehicle(vehicleService.find(vehicle).getDriver(),null);
+            } catch (Exception e) {}
             vehicleService.destroyVehicle(vehicle);
             return new ResponseEntity<>("true",HttpStatus.OK);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>("false",HttpStatus.OK);
         }
 

@@ -46,7 +46,7 @@ public class VehicleService {
     public void assignVehicle(String vehicle, String username){
         Vehicle v =dao.find(vehicle);
         v.setDriver(username);
-        dao.update(v);
+       // dao.update(v);
     }
 
     @Transactional

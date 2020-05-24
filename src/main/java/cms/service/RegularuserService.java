@@ -51,7 +51,7 @@ public class RegularuserService {
         if(user.getVehicleid()!=null) {
             unassigne(user);
         }
-        if(!vehicle.equals("null") && !vehicle.equals("none")) {
+        if(vehicle!=null &&!vehicle.equals("null") && !vehicle.equals("none")) {
             Vehicle v = vehicleService.find(vehicle);
             user.setVehicleid(v.getId());
             user.setAvailibility(true);
