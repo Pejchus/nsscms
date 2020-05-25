@@ -32,12 +32,16 @@ public class RegularuserService {
 
     @Transactional
     public void delete(Regularuser user){
-        vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(),null);
+       if( user.getVehicleid()!=null) {
+            vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(), null);
+        }
         user.setVehicleid(null);
         user.setPassword(null);
         user.setAvailibility(false);
         dao.update(user);
-        shipmentService.setfinish(user.getUsername());
+        try {
+            shipmentService.setfinish(user.getUsername());
+        }catch (Exception e){}
     }
 
     @Transactional
