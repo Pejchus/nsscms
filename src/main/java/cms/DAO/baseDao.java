@@ -12,6 +12,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @param <T>
+ * This class implements the genericDAO class which contains the declarations of
+ * the basic CRUD operations used in every other dao class
+ */
 public abstract class baseDao<T> implements genericDao<T> {
 
     @PersistenceContext

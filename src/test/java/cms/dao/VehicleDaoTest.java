@@ -55,14 +55,14 @@ public class VehicleDaoTest {
         user.setUsername("frajer");
         em.persist(user);
 
-        /*Vehicle v = new Vehicle(id);
+        Vehicle v = new Vehicle();
         v.setLicenseplate("1111111");
         v.setAvailability(true);
 
 
-        dao.createVehicle("1111111");
+        //dao.createVehicle();
         dao.assignVehicle(v.getLicenseplate(),user.getUsername());
-        Assert.assertEquals(user.getVehicleid(),v.getLicenseplate());*/
+        Assert.assertEquals(user.getVehicleid(),v.getLicenseplate());
     }
 
     public void createAndDestroyVehicleTest() throws Exception {

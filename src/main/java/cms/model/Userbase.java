@@ -4,7 +4,9 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 
-
+/**
+ * This class contains the metods which are used by both types of users
+ */
 public abstract class Userbase{
 
   private String username;

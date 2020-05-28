@@ -43,9 +43,6 @@ public class Shipment {
   }
 
 
-
-
-
   public Integer getId() {
     return id;
   }
