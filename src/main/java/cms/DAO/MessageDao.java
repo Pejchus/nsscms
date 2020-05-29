@@ -4,16 +4,11 @@ import cms.model.Message;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.OrderBy;
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.springframework.http.HttpHeaders.FROM;
-
 @Repository
-public class MessageDao extends baseDao {
+public class MessageDao extends BaseDao {
 
     protected MessageDao() {
         super(Message.class);

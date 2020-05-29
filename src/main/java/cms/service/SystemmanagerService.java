@@ -23,59 +23,58 @@ public class SystemmanagerService {
     }
 
     @Transactional
-    public Systemmanager find(String username){
+    public Systemmanager find(String username) {
         return dao.find(username);
     }
 
     @Transactional
-    public boolean createUser(String username, String password, String fullName){
-        return dao.createUser(username,password,fullName);
+    public boolean createUser(String username, String password, String fullName) {
+        return dao.createUser(username, password, fullName);
 
     }
 
     @Transactional
-    public boolean deleteUser(String username){
+    public boolean deleteUser(String username) {
         return dao.deleteUser(username);
     }
 
     @Transactional
-    public boolean processShipment(Integer id, String licensePlate){
-        return dao.processShipment(id,licensePlate);
+    public boolean processShipment(Integer id, String licensePlate) {
+        return dao.processShipment(id, licensePlate);
     }
 
     @Transactional
-    public boolean exists(String username){
+    public boolean exists(String username) {
         return dao.find(username) != null;
     }
 
     @Transactional
-    public void persist(Systemmanager manager){
+    public void persist(Systemmanager manager) {
         dao.persist(manager);
     }
-
-
 
 
     @Transactional
     public boolean autentificate(String username, String password) {
         Systemmanager user = find(username);
-        if(user==null){
+        if (user == null) {
             return false;
         }
-        System.out.println(user.getPassword()+"="+password);
-        if(user.getPassword().equals(password)){
+        System.out.println(user.getPassword() + "=" + password);
+        if (user.getPassword().equals(password)) {
             System.out.println("kokot");
             return true;
         }
         return false;
     }
+
     @Transactional
-    public List<Systemmanager> findAll(){
+    public List<Systemmanager> findAll() {
         return dao.findAll();
     }
 
     public void create(String username, String name, String password) {
-        dao.createUser(username,password,name);
+        dao.createUser(username, password, name);
     }
 
     public void delete(Systemmanager regularuser) {

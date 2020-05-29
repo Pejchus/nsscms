@@ -26,60 +26,60 @@ public class ManagerController {
         this.regularuserService = regularuserService;
     }
 
-    @GetMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Systemmanager find(@PathVariable String id) {
         return service.find(id);
     }
 
 
-
     @PutMapping(value = "/managers/shipments", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public boolean processShipment(@RequestBody Shipment shipment, Vehicle v){
-        return service.processShipment(shipment.getId(),v.getLicenseplate());
+    public boolean processShipment(@RequestBody Shipment shipment, Vehicle v) {
+        return service.processShipment(shipment.getId(), v.getLicenseplate());
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> findAll(){
+    public ResponseEntity<String> findAll() {
 
-        return new ResponseEntity<String>(Coder.codeManager(service.findAll()),HttpStatus.OK);
+        return new ResponseEntity<String>(Coder.codeManager(service.findAll()), HttpStatus.OK);
     }
-    @GetMapping(value = "/delete",produces = MediaType.APPLICATION_JSON_VALUE)
-    public boolean delete(@RequestParam String username){
-        Systemmanager regularuser =  service.find(username);
-        if(regularuser==null){
+
+    @GetMapping(value = "/delete", produces = MediaType.APPLICATION_JSON_VALUE)
+    public boolean delete(@RequestParam String username) {
+        Systemmanager regularuser = service.find(username);
+        if (regularuser == null) {
             return false;
         }
         service.delete(regularuser);
         return true;
     }
-    @GetMapping(value = "/full",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> findAllFull(){
-        return new ResponseEntity<String>((Coder.codeManagerFull(service.findAll())),HttpStatus.OK);
+
+    @GetMapping(value = "/full", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> findAllFull() {
+        return new ResponseEntity<String>((Coder.codeManagerFull(service.findAll())), HttpStatus.OK);
     }
+
     @RequestMapping(value = "/modify", method = RequestMethod.GET)
-    public boolean update(@RequestParam String previousUsername, @RequestParam String username,@RequestParam String name,@RequestParam String password){
-        if (!service.exists(previousUsername)){
+    public boolean update(@RequestParam String previousUsername, @RequestParam String username, @RequestParam String name, @RequestParam String password) {
+        if (!service.exists(previousUsername)) {
             return false;
         }
-        service.modify(service.find(previousUsername), username,name,password);
+        service.modify(service.find(previousUsername), username, name, password);
         return true;
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
-    public boolean postRegular(@RequestParam String username,@RequestParam String name,@RequestParam String password){
-        if (service.exists(username) || regularuserService.find(username)!=null){
+    public boolean postRegular(@RequestParam String username, @RequestParam String name, @RequestParam String password) {
+        if (service.exists(username) || regularuserService.find(username) != null) {
             return false;
         }
-        service.create(username,name,password);
+        service.create(username, name, password);
         return true;
     }
+
     @DeleteMapping(value = "/managers", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public boolean deleteUser(@RequestBody Regularuser u){
+    public boolean deleteUser(@RequestBody Regularuser u) {
         return service.deleteUser(u.getUsername());
     }
-
-
-
 
 
 }

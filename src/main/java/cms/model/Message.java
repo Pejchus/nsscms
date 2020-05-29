@@ -1,4 +1,5 @@
 package cms.model;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Repository
-public class VehicleDao extends baseDao<Vehicle>{
+public class VehicleDao extends BaseDao<Vehicle> {
 
     @PersistenceContext
     private EntityManager em;

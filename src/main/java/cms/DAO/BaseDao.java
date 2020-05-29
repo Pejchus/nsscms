@@ -1,11 +1,7 @@
 package cms.DAO;
 
 
-import cms.model.Vehicle;
-import org.springframework.core.annotation.Order;
-
 import javax.persistence.EntityManager;
-import javax.persistence.OrderBy;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceException;
 import java.util.Collection;
@@ -17,14 +13,14 @@ import java.util.Objects;
  * This class implements the genericDAO class which contains the declarations of
  * the basic CRUD operations used in every other dao class
  */
-public abstract class baseDao<T> implements genericDao<T> {
+public abstract class BaseDao<T> implements GenericDao<T> {
 
     @PersistenceContext
     protected EntityManager em;
 
     protected final Class<T> type;
 
-    protected baseDao(Class<T> type){
+    protected BaseDao(Class<T> type){
         this.type = type;
     }
 

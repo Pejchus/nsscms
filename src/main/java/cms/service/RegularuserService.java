@@ -23,16 +23,16 @@ public class RegularuserService {
 
     @Autowired
     public RegularuserService(RegularuserDao dao, ArchiveDao archivedao, ShipmentDao shipmentdao, VehicleService vehicleService, ShipmentDao shipmentDao, ShipmentService shipmentService) {
-        this.archivedao=archivedao;
-        this.shipmentdao=shipmentdao;
+        this.archivedao = archivedao;
+        this.shipmentdao = shipmentdao;
         this.dao = dao;
         this.vehicleService = vehicleService;
         this.shipmentService = shipmentService;
     }
 
     @Transactional
-    public void delete(Regularuser user){
-       if( user.getVehicleid()!=null) {
+    public void delete(Regularuser user) {
+        if (user.getVehicleid() != null) {
             vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(), null);
         }
         user.setVehicleid(null);
@@ -41,26 +41,28 @@ public class RegularuserService {
         dao.update(user);
         try {
             shipmentService.setfinish(user.getUsername());
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
     }
 
     @Transactional
-    public void modify(Regularuser user,String username, String name,String password,String vehicle,String licence){
+    public void modify(Regularuser user, String username, String name, String password, String vehicle, String licence) {
         user.setUsername(username);
         user.setLicensenumber(licence);
         user.setFullname(name);
-        if(!password.equals("")){
+        if (!password.equals("")) {
             user.setPassword(password);
-        }System.out.println(vehicle);
-        if(user.getVehicleid()!=null) {
+        }
+        System.out.println(vehicle);
+        if (user.getVehicleid() != null) {
             unassigne(user);
         }
-        if(vehicle!=null &&!vehicle.equals("null") && !vehicle.equals("none")) {
+        if (vehicle != null && !vehicle.equals("null") && !vehicle.equals("none")) {
             Vehicle v = vehicleService.find(vehicle);
             user.setVehicleid(v.getId());
             user.setAvailibility(true);
-            vehicleService.assignVehicle(vehicle,username);
-        }else {
+            vehicleService.assignVehicle(vehicle, username);
+        } else {
 
             user.setAvailibility(false);
             user.setVehicleid(null);
@@ -68,71 +70,75 @@ public class RegularuserService {
         dao.update(user);
     }
 
-    private void unassigne(Regularuser user){
+    private void unassigne(Regularuser user) {
         try {
-            vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(),null);
-        }catch (Exception e){
+            vehicleService.assignVehicle(vehicleService.findById(user.getVehicleid()).getLicenseplate(), null);
+        } catch (Exception e) {
         }
     }
 
 
     @Transactional
-    public Regularuser find(String username){
+    public Regularuser find(String username) {
         return dao.find(username);
     }
 
     @Transactional
-    public List<Regularuser> findAll(){
+    public List<Regularuser> findAll() {
         return dao.findAll();
     }
 
     @Transactional
-    public void setShipmentFinished(Integer id, String description){
+    public void setShipmentFinished(Integer id, String description) {
         dao.setShipmentFinished(id);
         Shipment shipment = shipmentdao.find(id);
         shipmentdao.deleteShipment(id);
     }
+
     @Transactional
-    public void setShipmentFailed(Integer id){
+    public void setShipmentFailed(Integer id) {
         dao.setShipmentFailed(id);
     }
 
     @Transactional
-    public List<Regularuser> findAvailable(){
+    public List<Regularuser> findAvailable() {
         return dao.findAvailable();
     }
+
     @Transactional
-    public void assignVehicle(String username,String vehicle){
+    public void assignVehicle(String username, String vehicle) {
         Regularuser user = find(username);
-        modify(user,user.getUsername(),user.getFullname(),user.getPassword(),vehicle,user.getLicensenumber());
+        modify(user, user.getUsername(), user.getFullname(), user.getPassword(), vehicle, user.getLicensenumber());
     }
 
     @Transactional
-    public void create(String username, String name,String password,String vehicle,String licence){
+    public void create(String username, String name, String password, String vehicle, String licence) {
 
         Vehicle v = vehicleService.find(vehicle);
-        if(v!=null) {
+        if (v != null) {
             dao.create(username, name, v.getId(), licence, password);
             v.setDriver(username);
             v.setAvailability(false);
-        }else {dao.create(username,name,licence,password);}
+        } else {
+            dao.create(username, name, licence, password);
+        }
 
     }
 
     @Transactional
-    public boolean autentificate(String username,String password){
-        Regularuser user= dao.find(username);
-        if(user==null){
+    public boolean autentificate(String username, String password) {
+        Regularuser user = dao.find(username);
+        if (user == null) {
             return false;
         }
-        System.out.println(user.getPassword()+"="+password);
-        if(user.getPassword().equals(password)){
+        System.out.println(user.getPassword() + "=" + password);
+        if (user.getPassword().equals(password)) {
             return true;
         }
         return false;
     }
 
     public List<Regularuser> findTruckless() {
-       return dao.truckLess();
+        return dao.truckLess();
     }
 }

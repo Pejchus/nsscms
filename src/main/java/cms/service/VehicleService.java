@@ -18,41 +18,44 @@ public class VehicleService {
     private final RegularuserDao regularuserDao;
 
     @Autowired
-    public VehicleService(VehicleDao dao,  RegularuserDao regularuserDao) {
+    public VehicleService(VehicleDao dao, RegularuserDao regularuserDao) {
         this.dao = dao;
         this.regularuserDao = regularuserDao;
     }
 
     @Transactional
-    public void createVehicle (String licensePlate,String user)throws Exception{
-        dao.createVehicle(licensePlate,user);
+    public void createVehicle(String licensePlate, String user) throws Exception {
+        dao.createVehicle(licensePlate, user);
     }
 
 
+    @Transactional
+    public List<Vehicle> findall() {
+        return dao.findAll();
+    }
 
     @Transactional
-    public List<Vehicle> findall(){
-       return dao.findAll();
-    }
-    @Transactional
-    public Vehicle find(String licensePlate){
+    public Vehicle find(String licensePlate) {
         return dao.find(licensePlate);
     }
+
     @Transactional
-    public Vehicle findById(Integer id){
+    public Vehicle findById(Integer id) {
         return dao.findbyId(id);
-    }
-    @Transactional
-    public void assignVehicle(String vehicle, String username){
-        Vehicle v =dao.find(vehicle);
-        v.setDriver(username);
-       // dao.update(v);
     }
 
     @Transactional
-    public void destroyVehicle(String licensePlate){
+    public void assignVehicle(String vehicle, String username) {
+        Vehicle v = dao.find(vehicle);
+        v.setDriver(username);
+        // dao.update(v);
+    }
+
+    @Transactional
+    public void destroyVehicle(String licensePlate) {
         dao.destroyVehicle(licensePlate);
     }
+
     @Transactional
     public List<Vehicle> findallavailable() {
         return dao.findAllAvailable();

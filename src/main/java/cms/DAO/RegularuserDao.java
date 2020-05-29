@@ -9,7 +9,7 @@ import java.util.Objects;
 import cms.model.Shipment;
 
 @Repository
-public class RegularuserDao extends baseDao<Regularuser>{
+public class RegularuserDao extends BaseDao<Regularuser> {
 
     @PersistenceContext
     private EntityManager em;

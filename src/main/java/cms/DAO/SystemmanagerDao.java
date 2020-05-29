@@ -1,6 +1,5 @@
 package cms.DAO;
 
-import cms.model.Shipment;
 import org.springframework.stereotype.Repository;
 import cms.model.Systemmanager;
 import javax.persistence.EntityManager;
@@ -9,7 +8,7 @@ import java.util.Objects;
 import cms.model.Regularuser;
 
 @Repository
-public class SystemmanagerDao extends baseDao<Systemmanager>{
+public class SystemmanagerDao extends BaseDao<Systemmanager> {
 
     @PersistenceContext
     private EntityManager em;

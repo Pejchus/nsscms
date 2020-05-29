@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @param <T>
  */
-public interface genericDao<T> {
+public interface GenericDao<T> {
 
     /**
      * Finds entity instance with the specified identifier.

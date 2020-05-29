@@ -24,27 +24,27 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-    @RequestMapping(value = "/messages",method = RequestMethod.GET)
-    public ResponseEntity<String> getmessages(@RequestParam String user,@RequestParam String role){
-        String messages = messageService.getMessages(user,role);
+    @RequestMapping(value = "/messages", method = RequestMethod.GET)
+    public ResponseEntity<String> getmessages(@RequestParam String user, @RequestParam String role) {
+        String messages = messageService.getMessages(user, role);
         return new ResponseEntity<>(messages, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/send",method = RequestMethod.GET)
-    public ResponseEntity<String> createMessage(@RequestParam String dispatcher,@RequestParam String driver,@RequestParam String sender,@RequestParam String content){
-        messageService.createMessage(content,dispatcher,driver,sender);
+    @RequestMapping(value = "/send", method = RequestMethod.GET)
+    public ResponseEntity<String> createMessage(@RequestParam String dispatcher, @RequestParam String driver, @RequestParam String sender, @RequestParam String content) {
+        messageService.createMessage(content, dispatcher, driver, sender);
         return new ResponseEntity<>("true", HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/message/delete",method = RequestMethod.GET)
-    public ResponseEntity<String> delete(@RequestParam String id){
+    @RequestMapping(value = "/message/delete", method = RequestMethod.GET)
+    public ResponseEntity<String> delete(@RequestParam String id) {
         messageService.delete(id);
         return new ResponseEntity<>("true", HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/message/deleteold",method = RequestMethod.GET)
-    public ResponseEntity<String> deleteold(@RequestParam String user){
-        messageService.deleteold(user,"DISPATCH");
+    @RequestMapping(value = "/message/deleteold", method = RequestMethod.GET)
+    public ResponseEntity<String> deleteold(@RequestParam String user) {
+        messageService.deleteold(user, "DISPATCH");
         return new ResponseEntity<>("true", HttpStatus.OK);
     }
 

@@ -31,9 +31,10 @@ public enum FxmlView {
     };
 
     public abstract String getTitle();
+
     public abstract String getFxmlFile();
 
-    String getStringFromResourceBundle(String key){
+    String getStringFromResourceBundle(String key) {
         return ResourceBundle.getBundle("Bundle").getString(key);
     }
 

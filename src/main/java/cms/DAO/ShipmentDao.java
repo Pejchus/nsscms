@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Repository
-public class ShipmentDao extends baseDao<Shipment>{
+public class ShipmentDao extends BaseDao<Shipment> {
 
     @PersistenceContext
     private EntityManager em;

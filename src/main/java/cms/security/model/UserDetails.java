@@ -11,7 +11,7 @@
  * <http://www.gnu.org/licenses/>.
  */
 package cms.security.model;
-        
+
 import cms.model.Regularuser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

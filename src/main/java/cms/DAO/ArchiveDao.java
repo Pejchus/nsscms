@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Repository
-public class ArchiveDao extends baseDao<Archive>{
+public class ArchiveDao extends BaseDao<Archive> {
 
 
     @PersistenceContext

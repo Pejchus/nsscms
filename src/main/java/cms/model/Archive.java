@@ -10,66 +10,66 @@ import javax.persistence.NamedQuery;
 @DiscriminatorValue("ARCHIVE")
 public class Archive {
 
-  private String cargo;
-  private String assignedvehicle;
-  @Id
-  private long id;
-  private String status;
-  private String destination;
-  private String description;
+    private String cargo;
+    private String assignedvehicle;
+    @Id
+    private long id;
+    private String status;
+    private String destination;
+    private String description;
 
 
-  public String getCargo() {
-    return cargo;
-  }
+    public String getCargo() {
+        return cargo;
+    }
 
-  public void setCargo(String cargo) {
-    this.cargo = cargo;
-  }
-
-
-  public String getAssignedvehicle() {
-    return assignedvehicle;
-  }
-
-  public void setAssignedvehicle(String assignedvehicle) {
-    this.assignedvehicle = assignedvehicle;
-  }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
 
-  public long getId() {
-    return id;
-  }
+    public String getAssignedvehicle() {
+        return assignedvehicle;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
-
-
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
+    public void setAssignedvehicle(String assignedvehicle) {
+        this.assignedvehicle = assignedvehicle;
+    }
 
 
-  public String getDestination() {
-    return destination;
-  }
+    public long getId() {
+        return id;
+    }
 
-  public void setDestination(String destination) {
-    this.destination = destination;
-  }
+    public void setId(long id) {
+        this.id = id;
+    }
 
 
-  public String getDescription() {
-    return description;
-  }
+    public String getStatus() {
+        return status;
+    }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 }

@@ -24,13 +24,13 @@ public class LoginRest {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password){
-        if(regularuserService.autentificate(username,password)) {
+    public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
+        if (regularuserService.autentificate(username, password)) {
             return new ResponseEntity<>("DRIVER", HttpStatus.OK);
         }
-        if(systemmanagerService.autentificate(username,password)) {
+        if (systemmanagerService.autentificate(username, password)) {
             return new ResponseEntity<>("DISPATCH", HttpStatus.OK);
         }
-        return new ResponseEntity<>("LOGIN",HttpStatus.OK);
+        return new ResponseEntity<>("LOGIN", HttpStatus.OK);
     }
 }

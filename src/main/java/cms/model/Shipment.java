@@ -6,67 +6,67 @@ import javax.persistence.*;
 @DiscriminatorValue("SHIPMENT")
 public class Shipment {
 
-  private String cargo;
+    private String cargo;
 
-  public String getDriver() {
-    return driver;
-  }
+    public String getDriver() {
+        return driver;
+    }
 
-  public void setDriver(String driver) {
-    this.driver = driver;
-  }
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
 
-  private String driver;
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
-  private String status;
-  private String destination;
+    private String driver;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    private String status;
+    private String destination;
 
-  public String getShippingdate() {
-    return shippingdate;
-  }
+    public String getShippingdate() {
+        return shippingdate;
+    }
 
-  public void setShippingdate(String shippingdate) {
-    this.shippingdate = shippingdate;
-  }
+    public void setShippingdate(String shippingdate) {
+        this.shippingdate = shippingdate;
+    }
 
-  private String shippingdate;
-
-
-  public String getCargo() {
-    return cargo;
-  }
-
-  public void setCargo(String cargo) {
-    this.cargo = cargo;
-  }
+    private String shippingdate;
 
 
-  public Integer getId() {
-    return id;
-  }
+    public String getCargo() {
+        return cargo;
+    }
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
 
-  public String getDestination() {
-    return destination;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setDestination(String destination) {
-    this.destination = destination;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
 
 }

@@ -44,7 +44,7 @@ public class RegularuserServiceTest {
         return shipment;
     }*/
     @Test
-    public void ShipmentFailedWorks(){
+    public void shipmentFailedWorks(){
      /*   final Shipment shipment =  genshipment();
         em.persist(shipment);
 

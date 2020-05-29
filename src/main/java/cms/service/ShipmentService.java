@@ -23,47 +23,49 @@ public class ShipmentService {
     }
 
     @Transactional(readOnly = true)
-    public Shipment find(Integer id){
+    public Shipment find(Integer id) {
         return dao.find(id);
     }
+
     @Transactional
-    public List<Shipment> findAll(){
-       return dao.findAll();
+    public List<Shipment> findAll() {
+        return dao.findAll();
     }
 
 
     @Transactional
-    public boolean setStatus(String status, Integer id){
-        return dao.setStatus(status,id);
+    public boolean setStatus(String status, Integer id) {
+        return dao.setStatus(status, id);
     }
+
     @Transactional
-    public boolean deleteShipment(Integer id){
+    public boolean deleteShipment(Integer id) {
         return dao.deleteShipment(id);
     }
 
 
-
     @Transactional
-    public void createShipment(String cargo,  String destination,String driver,String date){
+    public void createShipment(String cargo, String destination, String driver, String date) {
         Regularuser user = regularuserDao.find(driver);
         user.setAvailibility(false);
         regularuserDao.update(user);
-        dao.createShipment(cargo,destination,driver,date);
+        dao.createShipment(cargo, destination, driver, date);
     }
+
     @Transactional
     public List<Shipment> findactive(String driver) {
-       return dao.findByStatus("active",driver);
+        return dao.findByStatus("active", driver);
     }
 
     @Transactional
     public List<Shipment> findfinish(String driver) {
-        return dao.findByStatus("finished",driver);
+        return dao.findByStatus("finished", driver);
     }
 
     @Transactional
     public void setfinish(String driver) {
-        List<Shipment> shipments = dao.findByStatus("active",driver);
-        for (Shipment s : shipments){
+        List<Shipment> shipments = dao.findByStatus("active", driver);
+        for (Shipment s : shipments) {
             System.out.println("kokot");
             s.setStatus("finished");
             dao.update(s);
