@@ -85,6 +85,10 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:5.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.1.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-cache:2.1.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.hazelcast:hazelcast:3.11.4" level="project" />
+    <orderEntry type="library" name="Maven: com.hazelcast:hazelcast-spring:3.11.4" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.4" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.7.4" level="project" />
