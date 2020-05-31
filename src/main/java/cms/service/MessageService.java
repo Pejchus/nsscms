@@ -3,6 +3,7 @@ package cms.service;
 import cms.DAO.MessageDao;
 import cms.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "messages")
 public class MessageService {
     private final MessageDao messageDao;
 

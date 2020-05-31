@@ -6,12 +6,14 @@ import cms.DAO.VehicleDao;
 import cms.model.Regularuser;
 import cms.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "vehicles")
 public class VehicleService {
 
     private final VehicleDao dao;

@@ -5,12 +5,14 @@ import cms.DAO.ShipmentDao;
 import cms.model.Regularuser;
 import cms.model.Shipment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "shipments")
 public class ShipmentService {
 
     private final ShipmentDao dao;

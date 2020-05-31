@@ -2,6 +2,7 @@ package cms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * SpringApplication} then starts the Spring context and the whole application.
  */
 @SpringBootApplication
+@EnableCaching
 public class Main {
 
     protected ConfigurableApplicationContext springContext;
